@@ -1,5 +1,6 @@
 const Project = require("../models/pmsModel")
 
+//***** Create project method */
 
 exports.create = async (req, res) => {
   try {
@@ -29,6 +30,7 @@ exports.create = async (req, res) => {
   }
 };
 
+//***** List and Filter project method */
 
 exports.list = async (req, res) => {
   try {
@@ -59,6 +61,8 @@ exports.list = async (req, res) => {
 };
 
 
+//***** get project by ID method */
+
 exports.getById = async (req, res) => {
   try {
     const project = await Project.findOne({
@@ -77,7 +81,7 @@ exports.getById = async (req, res) => {
 };
 
 
-
+//***** Update project method */
 exports.update = async (req, res) => {
   try {
     const { status: newStatus } = req.body;
@@ -108,7 +112,7 @@ exports.update = async (req, res) => {
   }
 };
 
-
+//***** Soft delete project method */
 exports.Delete = async (req, res) => {
   try {
     const project = await Project.findOneAndUpdate(
