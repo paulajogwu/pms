@@ -38,5 +38,3 @@ app.use(function (req, res, next) {
 });
 
 app.listen(PORT)
-$ git config --global user.name "Paulajogwu"
-$ git config --global user.email "paulajogwu@gmail.com"
